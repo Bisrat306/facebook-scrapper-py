@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "facebook-reel-scraper"
+version = "1.0.0"
+description = "Facebook Reel Scraper using Playwright"
+requires-python = ">=3.8"
+
+[tool.setuptools]
+packages = ["."]
+
+[tool.pip]
+prefer-binary = true 

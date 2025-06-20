@@ -15,8 +15,6 @@ import os
 from dotenv import load_dotenv
 import pickle
 from pathlib import Path
-from facebook_scraper import get_posts, get_profile
-from facebook_scraper.exceptions import TemporarilyBanned, InvalidCookies
 
 class FacebookReelScraper:
     def __init__(self, use_cookies=True):
