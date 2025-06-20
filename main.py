@@ -20,7 +20,7 @@ def run_scraper_with_fallback(url: str):
     # Try authenticated scraping first (with timeout)
     try:
         logger.info("Attempting authenticated scraping...")
-        scraper_auth = FacebookReelScraper(use_cookies=True)
+        scraper_auth = FacebookReelScraper(use_cookies=True, auto_login=True)
         result = scraper_auth.get_reel_data(url)
         if result:
             logger.info("✅ Authenticated scraping successful")

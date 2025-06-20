@@ -54,7 +54,7 @@ def main():
     
     # Initialize scraper with both modes - use single instances
     logger.info("Initializing scrapers...")
-    scraper_authenticated = FacebookReelScraper(use_cookies=True)
+    scraper_authenticated = FacebookReelScraper(use_cookies=True, auto_login=True)
     scraper_public = FacebookReelScraper(use_cookies=False)
     
     try:

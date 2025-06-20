@@ -4,7 +4,19 @@ A Flask-based API for scraping Facebook Reels data with accurate views extractio
 
 ## Features
 
-- **Comprehensive Data Extraction**: Extract video URLs, descriptions, user information, engagement metrics
+- **Automatic Login**: Automatically logs into Facebook using credentials and creates cookies for future use
+- **Cookie Management**: Validates and refreshes cookies automatically
+- **Multiple Scraping Modes**: 
+  - Authenticated scraping (with login)
+  - Public scraping (without login)
+  - Quick scraping (basic data only)
+- **Comprehensive Data Extraction**:
+  - Video URL
+  - Description and hashtags
+  - User information
+  - Engagement metrics (likes, comments, shares, views)
+  - Timestamps
+  - Metadata
 - **Accurate Views Extraction**: Navigate to user's reels page to get precise view counts
 - **Smart Fallback System**: Authenticated → Public → Quick scraping with automatic fallback
 - **Enhanced Engagement Metrics**: Extract likes, comments, shares with intelligent parsing
@@ -29,16 +41,15 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 3. **Install dependencies**:
 ```bash
 pip install -r requirements.txt
-```
-
-4. **Install Playwright browsers**:
-```bash
 playwright install chromium
 ```
 
-5. **Set up cookies (optional, for authenticated scraping)**:
-   - Create a `facebook_cookies.json` file with your Facebook cookies
-   - Format: `{"cookie_name": "cookie_value", ...}`
+4. **Set up environment variables** (for auto-login):
+```bash
+# Create .env file
+echo "FACEBOOK_EMAIL=your_email@example.com" > .env
+echo "FACEBOOK_PASSWORD=your_password" >> .env
+```
 
 ## Usage
 
